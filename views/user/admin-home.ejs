@@ -1,0 +1,17 @@
+<section class="articles">
+    <h2 class="article__heading">Posts</h2>
+
+    <ul class="article-ul">
+        <% data.forEach(blog=> { %>
+            <li class="">
+                <a href="/<%= blog._id %>">
+                    <span>
+                        <%= blog.title %>
+                    </span>
+                    <span class="article-list__date">
+                        <%= blog.createdAt.toDateString() %>
+                    </span>
+                </a>
+            </li>
+            <% }) %>
+    </ul>
