@@ -74,7 +74,7 @@ router.get('/:id', async (req, res) => {
     const { id } = req.params;
     try {
         if (!mongoose.Types.ObjectId.isValid(id)) {
-            throw new Error('Invalid blog ID')
+            throw new Error('Invalid blog ID');
         }
         const blog = await Blog.findById(id)
         const locals = {
